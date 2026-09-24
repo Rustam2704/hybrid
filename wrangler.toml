@@ -1,0 +1,23 @@
+name = "hybrid"
+main = "worker/index.js"
+compatibility_date = "2026-09-01"
+routes = [
+  { pattern = "fanatic.space/hybrid*", zone_name = "fanatic.space" },
+]
+
+[assets]
+directory = "./.site"
+binding = "ASSETS"
+html_handling = "auto-trailing-slash"
+not_found_handling = "none"
+run_worker_first = ["/hybrid/api/*", "/hybrid/downloads/*"]
+
+[[kv_namespaces]]
+binding = "ORDERS"
+id = "de8f21e8f2ac405c860876380323178f"
+
+[vars]
+SITE_URL = "https://fanatic.space"
+LIQPAY_SANDBOX = "1"
+PADDLE_ENV = "sandbox"
+# secrets (wrangler secret put): LIQPAY_PUBLIC_KEY LIQPAY_PRIVATE_KEY MONO_TOKEN PADDLE_WEBHOOK_SECRET PADDLE_CLIENT_TOKEN PADDLE_PRICE_PROGRAM ...

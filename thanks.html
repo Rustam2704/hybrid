@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Дякую за оплату — Смак здоров'я</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/img/her/caricature.jpg">
+<link rel="stylesheet" href="assets/fonts/shell-fonts.css">
+<link rel="stylesheet" href="assets/fonts/google-fonts.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/checkout.css">
+<link rel="alternate" hreflang="uk" href="thanks.html">
+<link rel="alternate" hreflang="en" href="en/thanks.html">
+</head>
+<body data-lang="uk" data-api="/hybrid/api">
+<header class="side" id="top">
+  <a class="side__logo" href="./" aria-label="На головну"><img src="assets/img/her/caricature.jpg" alt="" width="56" height="56"></a>
+  <button class="side__burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="Меню"><span></span><span></span><span></span></button>
+  <nav class="side__nav" id="nav" aria-label="Головне меню">
+    <ul>
+      <li><a href="./#subscribe">Розсилка</a></li>
+      <li><a href="./#about">Про мене</a></li>
+      <li><a href="./#blog">Блог</a></li>
+      <li><a href="./#video">Відео</a></li>
+      <li><a href="./#guides">Гайди</a></li>
+      <li class="is-current"><a href="checkout.html">Оплата</a></li>
+      <li><a href="./#recipes">Рецепти</a></li>
+    </ul>
+  </nav>
+  <div class="side__tools">
+    <a href="./#search" aria-label="Пошук"><i class="fa-solid fa-magnifying-glass"></i></a>
+    <a href="checkout.html" aria-label="Кошик"><i class="fa-solid fa-cart-shopping"></i></a>
+    <a href="./#subscribe" aria-label="Кабінет"><i class="fa-solid fa-user"></i></a>
+    <span class="lang" aria-label="Мова"><a class="is-active" href="thanks.html" hreflang="uk" data-lang="uk">UA</a><a href="en/thanks.html" hreflang="en" data-lang="en">EN</a></span>
+  </div>
+</header>
+
+<main class="main" id="main">
+  <section class="tp tp--framed pay" id="thanks" data-state="pending">
+    <p class="tp__accent"><i class="fa-solid fa-circle"></i> Замовлення <span id="order-id">…</span></p>
+    <h1 class="tp__h2--big" data-when="pending">Перевіряю оплату…</h1>
+    <h1 class="tp__h2--big" data-when="paid">Дякую! Оплата пройшла</h1>
+    <h1 class="tp__h2--big" data-when="failed">Оплата не пройшла</h1>
+    <p class="pay__lead" data-when="pending">Це займає кілька секунд. Сторінка оновиться сама.</p>
+    <p class="pay__lead" data-when="paid"><span id="order-title"></span>. Лист із підтвердженням і посиланням уже летить на вашу пошту.</p>
+    <p class="pay__lead" data-when="failed">Гроші не списано. Спробуйте ще раз або оберіть інший спосіб оплати.</p>
+    <p data-when="paid" id="download-row" hidden><a class="btn-tp btn-tp--solid" id="download" href="#">Завантажити файл</a></p>
+    <p data-when="failed"><a class="btn-tp" href="checkout.html">Повторити оплату</a></p>
+    <p class="tp__tiny" data-when="paid">Посилання на завантаження діє постійно для цього замовлення. Якщо файл не відкривається, напишіть мені, вказавши номер замовлення.</p>
+  </section>
+  <footer class="footer">
+    <p class="footer__copy">© 2026 Олена Калитовська · Смак здоров'я</p>
+    <a class="footer__top" href="./">← На головну</a>
+  </footer>
+</main>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/checkout.js" defer></script>
+</body>
+</html>

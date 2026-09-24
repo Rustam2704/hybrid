@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Checkout — Taste of Health</title>
+<meta content="noindex" name="robots"/>
+<link href="../assets/img/her/caricature.jpg" rel="icon"/>
+<link href="../assets/fonts/shell-fonts.css" rel="stylesheet"/>
+<link href="../assets/fonts/google-fonts.css" rel="stylesheet"/>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<link href="../assets/css/checkout.css" rel="stylesheet"/>
+<link href="../checkout.html" hreflang="uk" rel="alternate"/>
+<link href="checkout.html" hreflang="en" rel="alternate"/>
+</head>
+<body data-api="/hybrid/api" data-lang="en">
+<header class="side" id="top">
+<a aria-label="Home" class="side__logo" href="./"><img alt="" height="56" src="../assets/img/her/caricature.jpg" width="56"/></a>
+<button aria-controls="nav" aria-expanded="false" aria-label="Menu" class="side__burger" type="button"><span></span><span></span><span></span></button>
+<nav aria-label="Main menu" class="side__nav" id="nav">
+<ul>
+<li><a href="./#subscribe">Newsletter</a></li>
+<li><a href="./#about">About</a></li>
+<li><a href="./#blog">Blog</a></li>
+<li><a href="./#video">Video</a></li>
+<li><a href="./#guides">Guides</a></li>
+<li class="is-current"><a href="checkout.html">Checkout</a></li>
+<li><a href="./#recipes">Recipes</a></li>
+</ul>
+</nav>
+<div class="side__tools">
+<a aria-label="Search" href="./#search"><i class="fa-solid fa-magnifying-glass"></i></a>
+<a aria-label="Cart" href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
+<a aria-label="Account" href="./#subscribe"><i class="fa-solid fa-user"></i></a>
+<span aria-label="Language" class="lang"><a class="" data-lang="uk" href="../checkout.html" hreflang="uk">UA</a><a class="is-active" data-lang="en" href="checkout.html" hreflang="en">EN</a></span>
+</div>
+</header>
+<main class="main" id="main">
+<section class="tp tp--framed pay">
+<h1 class="tp__h2--big">Checkout</h1>
+<p class="pay__lead">Choose what you're buying and how you'd like to pay. LiqPay and monobank are best for Ukrainian cards; cards from other countries go through the international option.</p>
+<form class="pay__form" id="pay-form" novalidate="">
+<fieldset class="pay__block">
+<legend class="pay__legend">1. What you're buying</legend>
+<div aria-live="polite" class="pay__products" id="products"><p class="pay__muted">Loading…</p></div>
+</fieldset>
+<fieldset class="pay__block">
+<legend class="pay__legend">2. Where to send it</legend>
+<label class="pay__field"><span>Email address</span><input autocomplete="email" name="email" placeholder="olena@example.com" required="" type="email"/></label>
+</fieldset>
+<fieldset class="pay__block">
+<legend class="pay__legend">3. Payment method</legend>
+<div class="pay__methods">
+<label class="pay__method" data-provider="liqpay">
+<input checked="" name="provider" type="radio" value="liqpay"/>
+<span class="pay__method-body"><b>LiqPay</b><small>Ukrainian bank cards, Apple Pay, Google Pay · UAH</small></span>
+<span class="pay__badge" data-status="liqpay"></span>
+</label>
+<label class="pay__method" data-provider="mono">
+<input name="provider" type="radio" value="mono"/>
+<span class="pay__method-body"><b>monobank</b><small>Pay in the mono app or with any card · UAH</small></span>
+<span class="pay__badge" data-status="mono"></span>
+</label>
+<label class="pay__method" data-provider="intl">
+<input name="provider" type="radio" value="intl"/>
+<span class="pay__method-body"><b>International card</b><small>Visa / Mastercard from Europe, the US, Canada · USD or EUR</small></span>
+<span class="pay__badge" data-status="intl"></span>
+</label>
+</div>
+<div class="pay__currency" hidden="" id="currency-row">
+<span>Currency:</span>
+<label><input checked="" name="currency" type="radio" value="USD"/> USD</label>
+<label><input name="currency" type="radio" value="EUR"/> EUR</label>
+</div>
+</fieldset>
+<div class="pay__total">
+<span>Total:</span> <strong id="total">—</strong>
+</div>
+<button class="btn-tp btn-tp--solid pay__submit" type="submit">Proceed to payment</button>
+<p class="pay__error" hidden="" id="pay-error" role="alert"></p>
+<p class="tp__tiny">Payment happens on the provider's secure page; card details never reach this site. Afterwards you return here and receive the file or a confirmation by e-mail.</p>
+</form>
+</section>
+<footer class="footer">
+<p class="footer__copy">© 2026 Olena Kalytovska · Taste of Health</p>
+<a class="footer__top" href="./">← Back home</a>
+</footer>
+</main>
+<script defer="" src="../assets/js/main.js"></script>
+<script defer="" src="../assets/js/checkout.js"></script>
+</body>
+</html>

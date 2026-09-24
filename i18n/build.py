@@ -20,9 +20,10 @@ def tr(v):
     if CYR.search(key): missing.add(key)
     return None
 
-for page in ("index.html", "recipe.html"):
+for page in ("index.html", "recipe.html", "checkout.html", "thanks.html"):
     soup = BeautifulSoup(open(page, encoding="utf-8").read(), "lxml")
     soup.html["lang"] = "en"
+    if soup.body and soup.body.get("data-lang"): soup.body["data-lang"] = "en"
     for t in list(soup.find_all(string=True)):
         if isinstance(t, Comment) or t.parent.name in ("script", "style"): continue
         raw = str(t); new = tr(raw)

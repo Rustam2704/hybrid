@@ -7,3 +7,5 @@ design-system/ds-bundle/
 design-system/.design-sync/.cache/
 design-system/.design-sync/learnings/
 design-system/.design-sync/node_modules
+.site/
+.dev.vars

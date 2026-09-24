@@ -1,0 +1,36 @@
+/* checkout + thank-you pages, theproof shell */
+.pay { min-height: 70vh; }
+.pay .tp__h2--big { margin-bottom: 20px; }
+.pay__lead { max-width: 760px; margin-bottom: 40px; }
+.pay__form { max-width: 760px; }
+.pay__block { border: var(--frame); padding: 24px 28px 28px; margin: 0 0 24px; }
+.pay__legend { font: 700 18px/1 var(--tp-head); letter-spacing: 3.8px; text-transform: uppercase; color: var(--tp-green); padding: 0 10px; }
+.pay__products, .pay__methods { display: grid; gap: 12px; }
+.pay__product, .pay__method { display: grid; grid-template-columns: 24px 1fr auto; gap: 16px; align-items: center; padding: 14px 16px; border: 2px solid rgba(55,85,66,.25); cursor: pointer; background: #fff; }
+.pay__product:has(input:checked), .pay__method:has(input:checked) { border-color: var(--tp-green); box-shadow: inset 0 0 0 1px var(--tp-green); }
+.pay__product input, .pay__method input { width: 20px; height: 20px; accent-color: var(--tp-green); margin: 0; }
+.pay__product-body b, .pay__method-body b { display: block; font: 700 20px/26px var(--tp-body); color: var(--tp-green); }
+.pay__product-body small, .pay__method-body small { display: block; font-size: 15px; line-height: 22px; letter-spacing: .3px; opacity: .8; }
+.pay__price { font: 700 22px/1 var(--tp-head); letter-spacing: 1px; color: var(--tp-green); white-space: nowrap; }
+.pay__badge:empty { display: none; }
+.pay__badge { font: 700 12px/1 var(--tp-head); letter-spacing: 2px; text-transform: uppercase; color: var(--tp-green); background: var(--tp-yellow); padding: 6px 8px; }
+.pay__method.is-disabled { opacity: .55; cursor: not-allowed; }
+.pay__field { display: block; }
+.pay__field span { display: block; font-size: 15px; letter-spacing: .3px; margin-bottom: 6px; }
+.pay__field input { width: 100%; font: 400 20px/30px var(--tp-body); letter-spacing: .8px; padding: 12px 16px; border: var(--frame); background: #fff; color: var(--tp-ink); }
+.pay__field input:focus { outline: 2px solid var(--tp-yellow); outline-offset: -2px; }
+.pay__currency { display: flex; gap: 22px; align-items: center; margin-top: 16px; font-size: 17px; }
+.pay__currency label { display: inline-flex; gap: 6px; align-items: center; cursor: pointer; }
+.pay__total { display: flex; gap: 14px; align-items: baseline; margin: 8px 0 20px; font-size: 20px; }
+.pay__total strong { font: 700 34px/1 var(--tp-head); letter-spacing: 1px; color: var(--tp-green); }
+.pay__submit { margin-bottom: 18px; }
+.pay__error { color: #a12b2b; font-size: 16px; margin-bottom: 12px; }
+.pay__muted { opacity: .6; }
+#thanks [data-when] { display: none; }
+#thanks[data-state="pending"] [data-when="pending"], #thanks[data-state="paid"] [data-when="paid"], #thanks[data-state="failed"] [data-when="failed"] { display: block; }
+#thanks p[data-when] a { margin-top: 10px; }
+@media (max-width: 600px) {
+  .pay__block { padding: 18px 16px 20px; }
+  .pay__product, .pay__method { grid-template-columns: 22px 1fr; }
+  .pay__price, .pay__badge { grid-column: 2; justify-self: start; }
+}

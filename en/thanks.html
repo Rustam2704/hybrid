@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Thank you — Taste of Health</title>
+<meta content="noindex" name="robots"/>
+<link href="../assets/img/her/caricature.jpg" rel="icon"/>
+<link href="../assets/fonts/shell-fonts.css" rel="stylesheet"/>
+<link href="../assets/fonts/google-fonts.css" rel="stylesheet"/>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<link href="../assets/css/checkout.css" rel="stylesheet"/>
+<link href="../thanks.html" hreflang="uk" rel="alternate"/>
+<link href="thanks.html" hreflang="en" rel="alternate"/>
+</head>
+<body data-api="/hybrid/api" data-lang="en">
+<header class="side" id="top">
+<a aria-label="Home" class="side__logo" href="./"><img alt="" height="56" src="../assets/img/her/caricature.jpg" width="56"/></a>
+<button aria-controls="nav" aria-expanded="false" aria-label="Menu" class="side__burger" type="button"><span></span><span></span><span></span></button>
+<nav aria-label="Main menu" class="side__nav" id="nav">
+<ul>
+<li><a href="./#subscribe">Newsletter</a></li>
+<li><a href="./#about">About</a></li>
+<li><a href="./#blog">Blog</a></li>
+<li><a href="./#video">Video</a></li>
+<li><a href="./#guides">Guides</a></li>
+<li class="is-current"><a href="checkout.html">Checkout</a></li>
+<li><a href="./#recipes">Recipes</a></li>
+</ul>
+</nav>
+<div class="side__tools">
+<a aria-label="Search" href="./#search"><i class="fa-solid fa-magnifying-glass"></i></a>
+<a aria-label="Cart" href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
+<a aria-label="Account" href="./#subscribe"><i class="fa-solid fa-user"></i></a>
+<span aria-label="Language" class="lang"><a class="" data-lang="uk" href="../thanks.html" hreflang="uk">UA</a><a class="is-active" data-lang="en" href="thanks.html" hreflang="en">EN</a></span>
+</div>
+</header>
+<main class="main" id="main">
+<section class="tp tp--framed pay" data-state="pending" id="thanks">
+<p class="tp__accent"><i class="fa-solid fa-circle"></i> Order <span id="order-id">…</span></p>
+<h1 class="tp__h2--big" data-when="pending">Checking your payment…</h1>
+<h1 class="tp__h2--big" data-when="paid">Thank you! Payment received</h1>
+<h1 class="tp__h2--big" data-when="failed">Payment failed</h1>
+<p class="pay__lead" data-when="pending">This takes a few seconds. The page refreshes by itself.</p>
+<p class="pay__lead" data-when="paid"><span id="order-title"></span>. A confirmation e-mail with the link is on its way to you.</p>
+<p class="pay__lead" data-when="failed">You have not been charged. Try again or choose another payment method.</p>
+<p data-when="paid" hidden="" id="download-row"><a class="btn-tp btn-tp--solid" href="#" id="download">Download the file</a></p>
+<p data-when="failed"><a class="btn-tp" href="checkout.html">Try again</a></p>
+<p class="tp__tiny" data-when="paid">The download link stays valid for this order. If the file does not open, write to me and quote the order number.</p>
+</section>
+<footer class="footer">
+<p class="footer__copy">© 2026 Olena Kalytovska · Taste of Health</p>
+<a class="footer__top" href="./">← Back home</a>
+</footer>
+</main>
+<script defer="" src="../assets/js/main.js"></script>
+<script defer="" src="../assets/js/checkout.js"></script>
+</body>
+</html>
