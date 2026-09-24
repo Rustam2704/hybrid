@@ -1,0 +1,60 @@
+/* cookingforpeanuts single-recipe layout inside the theproof shell */
+.band--post { text-align: left; padding: 40px 24px 36px; }
+.band--post > * { max-width: 1080px; margin-left: auto; margin-right: auto; font-family: var(--cfp-sans); color: var(--cfp-ink); letter-spacing: 0; }
+.crumbs { font-size: 15px; line-height: 24px; margin-bottom: 8px; }
+.crumbs a { color: var(--cfp-ink); text-decoration: none; }
+.post__title { font: 700 32px/1.2 var(--cfp-serif); text-align: center; margin: 0 0 12px; color: #000; }
+.post__rating { font-size: 16px; margin-bottom: 10px; }
+.stars { color: #69532b; margin-right: 6px; }
+.post__excerpt { font-size: 19px; line-height: 30px; margin-bottom: 14px; }
+.post__meta { font-size: 14px; line-height: 20px; }
+.post__meta img { float: left; margin-right: 12px; }
+.post__meta::after { content: ""; display: block; clear: both; }
+.post__meta img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; float: left; margin-right: 12px; }
+.post__meta a { color: var(--cfp-ink); }
+
+.cfp--post { padding-top: 40px; }
+.post { display: grid; grid-template-columns: 1fr 300px; gap: 48px; align-items: start; max-width: 1080px; margin: 0 auto; }
+.post__body h2 { font: 700 26px/1.25 var(--cfp-serif); margin: 40px 0 16px; color: #000; }
+.post__body p { margin: 0 0 24px; }
+.post__img { width: 100%; max-width: 620px; margin: 0 auto 30px; box-shadow: 0 0 0 1px #e3ded6; }
+.post__list { padding-left: 24px; margin: 0 0 24px; list-style: disc; }
+ol.post__list { list-style: decimal; }
+.post__list li { margin-bottom: 8px; }
+.jump { display: inline-block; background: var(--cfp-primary); color: #fff !important; font-weight: 700; padding: 11px 18px; text-decoration: none; margin-bottom: 30px; }
+
+.card { border: 1px solid #ddd6cc; background: #fff; padding: 28px; margin: 40px 0 20px; box-shadow: 0 2px 12px rgba(0,0,0,.05); }
+.card__head { display: grid; grid-template-columns: 200px 1fr; gap: 24px; align-items: start; padding-bottom: 24px; border-bottom: 1px solid #e6e1d8; }
+.card__head img { width: 200px; aspect-ratio: 3/4; object-fit: cover; }
+.card__title { font: 700 26px/1.2 var(--cfp-serif); margin: 0 0 8px; color: #000; }
+.card__summary { font-size: 17px; line-height: 26px; margin: 0 0 14px; }
+.card__meta { display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: 15px; line-height: 20px; margin-bottom: 16px; }
+.card__meta b { display: block; text-transform: uppercase; font-size: 12px; letter-spacing: 1px; color: var(--cfp-primary); }
+.card__btns { display: flex; gap: 10px; }
+.card__btns .btn-cfp { line-height: 24px; padding: 8px 16px; font-size: 16px; }
+.card__btns .btn-cfp::after { content: none; }
+.card__cols { display: grid; grid-template-columns: 1fr 1.3fr; gap: 32px; padding-top: 24px; }
+.card h3 { font: 700 20px/1.3 var(--cfp-serif); margin: 0 0 12px; text-transform: uppercase; letter-spacing: .5px; }
+.card__ing, .card__steps { margin: 0 0 24px; padding-left: 22px; font-size: 17px; line-height: 28px; }
+.card__ing { list-style: square; }
+.card__steps { list-style: decimal; }
+.card__nutrition { font-size: 15px; line-height: 24px; color: #444; }
+
+.post__side { position: sticky; top: 24px; }
+.author--side { margin-top: 100px; padding: 0 24px 28px; }
+.author__avatar--side { margin-top: -85px; }
+.side-box { background: var(--cfp-bg); padding: 24px; margin-top: 24px; text-align: center; }
+.side-box h3 { font: 700 22px/1.2 var(--cfp-serif); margin: 0 0 10px; }
+.side-box p { margin: 0 0 16px; font-size: 17px; line-height: 26px; }
+.side-box .btn-cfp::after { content: none; }
+
+@media (max-width: 1023px) {
+  .post { grid-template-columns: 1fr; }
+  .post__side { position: static; }
+  .card__head, .card__cols { grid-template-columns: 1fr; }
+  .card__head img { width: 160px; }
+}
+@media print {
+  .side, .footer, .post__side, .jump, .band--post, .post__body > :not(.card) { display: none !important; }
+  .main { margin: 0; }
+}
