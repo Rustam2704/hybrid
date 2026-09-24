@@ -1,0 +1,84 @@
+{
+  "pkg": "taste-of-health-ds",
+  "globalName": "TasteOfHealth",
+  "projectId": "23bbc733-f64f-40ca-b824-3cfddc9e3153",
+  "shape": "package",
+  "buildCmd": "npm run build",
+  "cssEntry": "dist/styles.css",
+  "extraFonts": [
+    "../assets/fonts/shell-fonts.css",
+    "../assets/fonts/google-fonts.css"
+  ],
+  "readmeHeader": ".design-sync/conventions.md",
+  "overrides": {
+    "AuthorCard": {
+      "cardMode": "column",
+      "viewport": "1280x820"
+    },
+    "ButtonGroup": {
+      "cardMode": "column",
+      "viewport": "1280x820"
+    },
+    "CfpContainer": {
+      "cardMode": "column",
+      "viewport": "1280x820"
+    },
+    "FeatureStack": {
+      "cardMode": "column",
+      "viewport": "1280x820"
+    },
+    "Footer": {
+      "cardMode": "column",
+      "viewport": "1280x820"
+    },
+    "FramedSection": {
+      "cardMode": "column",
+      "viewport": "1280x820"
+    },
+    "Hero": {
+      "cardMode": "column",
+      "viewport": "1280x820"
+    },
+    "Newsletter": {
+      "cardMode": "column",
+      "viewport": "1280x820"
+    },
+    "PhotoGrid": {
+      "cardMode": "column",
+      "viewport": "1280x820"
+    },
+    "QuoteBubble": {
+      "cardMode": "column",
+      "viewport": "1280x820"
+    },
+    "RecipeCardBox": {
+      "cardMode": "column",
+      "viewport": "1280x820"
+    },
+    "RecipeGrid": {
+      "cardMode": "column",
+      "viewport": "1280x820"
+    },
+    "SearchBand": {
+      "cardMode": "column",
+      "viewport": "1280x820"
+    },
+    "SectionTitle": {
+      "cardMode": "column",
+      "viewport": "1280x820"
+    },
+    "TpHeading": {
+      "cardMode": "column",
+      "viewport": "1280x820"
+    },
+    "VideoCard": {
+      "cardMode": "column",
+      "viewport": "1280x820"
+    },
+    "Sidebar": {
+      "cardMode": "single",
+      "primaryStory": "Default",
+      "viewport": "1440x860"
+    }
+  }
+}
