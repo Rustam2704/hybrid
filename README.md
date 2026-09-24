@@ -11,10 +11,25 @@ except the English generator.
 
 Live: https://fanatic.space/hybrid/ (Ukrainian) · https://fanatic.space/hybrid/en/ (English)
 
+## Payments
+
+`checkout.html` / `thanks.html` + the Cloudflare Worker in `worker/` (LiqPay, monobank, Paddle for EU/US/Canada,
+orders in Workers KV, protected downloads). Everything is deployed; each provider switches on the moment its
+keys are added with `wrangler secret put`. Full instructions: `PAYMENTS.md`.
+
+## Design system for Claude Design
+
+`design-system/` is a React component library (21 components) built from the same CSS, synced to the
+Claude Design project «Taste of Health Design System» with `/design-sync` (config in `design-system/.design-sync/`).
+Re-sync after changing components: `cd design-system && npm run build && node .ds-sync/resync.mjs --config .design-sync/config.json --node-modules ./node_modules --entry ./dist/index.js --out ./ds-bundle`.
+
 ## Structure
 
 ```
-index.html, recipe.html      Ukrainian pages (source of truth)
+index.html, recipe.html,
+checkout.html, thanks.html   Ukrainian pages (source of truth)
+worker/                      payments API (Cloudflare Worker), PAYMENTS.md explains it
+design-system/               React component library synced to Claude Design
 en/                          English pages, generated: python3 i18n/build.py
 i18n/en.json                 translation dictionary (Ukrainian string -> English)
 assets/css/style.css         shell + home page styles
@@ -34,5 +49,5 @@ Lato + Lora; Google's Lato has no Cyrillic, so Lato 2.0 from latofonts.com (OFL)
 ## Editing
 
 Edit the Ukrainian pages, add or change strings in `i18n/en.json`, run `python3 i18n/build.py`
-(it fails loudly if any Cyrillic string is left untranslated), then redeploy.
+(it fails loudly if any Cyrillic string is left untranslated), then `./deploy.sh`.
 All links are relative, so the folder works at any URL prefix.
